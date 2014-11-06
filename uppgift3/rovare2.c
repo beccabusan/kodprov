@@ -19,12 +19,12 @@ char* rovarsprak_to_str(char *s){
   lengthOfS = strlen(s);
   for(int i = 0; i < lengthOfS; i++){
 
-    if (!(isalpha(s[i]))){
+    if(!(isalpha(s[i]))){
       ++i;
-    }
-    else if (isalpha(s[i])){
+      }
+   else if (isalpha(s[i])){
 
-      if (is_consonant(s[i]) == 0){
+      if(is_consonant(s[i]) == 0){
 	t = s[i];
 	++i;
 	if (s[i] == 'o' || s[i] == 'O') {
@@ -43,7 +43,7 @@ char* rovarsprak_to_str(char *s){
 	newS[j] = s[i];
 	++j;
       }
-    }
+   }
   }      
   return newS;
 }
