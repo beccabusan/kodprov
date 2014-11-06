@@ -63,3 +63,6 @@ int main (int argc, char *argv[]){
 }
 
 //allokerar plats två gånger!! not good!
+//Fel i is_consonant, ändrat nu till t == "a" istället för t != "a". Kollar nu efter vokaler och returnerar 0 om det är en vokal och 1 om det är en konsonant.
+//Också fel på rad 33 skall vara i++;  inte i=+2;. 
+//Även utkomenterad kod som var onödig.
