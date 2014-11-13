@@ -27,7 +27,7 @@ char* rovarsprak_to_str(char *s){
       if(is_consonant(s[i]) == 0){
 	t = s[i];
 	++i;
-	if (s[i] == 'o' || s[i] == 'O') {
+	if ((s[i] == 'o' || s[i] == 'O') && (tolower(s[i+1]) == tolower(t)) ) {
 	  newS[j] = t;
 	  ++j;
 	  i = i+1;
@@ -62,7 +62,10 @@ int main (int argc, char *argv[]){
   return 0;
 }
 
-//allokerar plats två gånger!! not good!
-//Fel i is_consonant, ändrat nu till t == "a" istället för t != "a". Kollar nu efter vokaler och returnerar 0 om det är en vokal och 1 om det är en konsonant.
-//Också fel på rad 33 skall vara i++;  inte i=+2;. 
-//Även utkomenterad kod som var onödig.
+/*
+- allokerar plats två gånger!! not good!(borttaget i denna version)
+- Fel i is_consonant, ändrat nu till t == "a" istället för t != "a". Kollar nu efter vokaler och returnerar 0 om det är en vokal och 1 om det är en konsonant.
+- Också fel på rad 33 skall vara i++;  inte i=+2; eftersom for loopen adderar ett tilli. 
+- Även utkomenterad kod som var onödig.
+- Lade till  && (tolower(s[i+1]) == tolower(t)) för att göra programmet säkrare
+*/
